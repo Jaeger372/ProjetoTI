@@ -1,0 +1,203 @@
+(Jogadores HTML)
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de TI - Jogadores</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="jogadores.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BLUE LOCK PROJETO</div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="equipas.html">Equipas</a>
+            <a href="jogadores.html" class="active">Jogadores</a>
+            <a href="cronologia.html">Cronologia</a>
+            <a href="curiosidades.html">Curiosidades</a>
+            <a href="suporte.html">Suporte</a>
+        </nav>
+    </header>
+    
+    <section class="players-section">
+        <h1 class="section-title">OS EGOS: ANÁLISE DETALHADA DOS AVANÇADOS</h1>
+        <p class="subtitle">O valor de mercado atual e as capacidades técnicas dos melhores produtos do Blue Lock.</p>
+        
+        <div class="players-grid">
+            <div id="isagi" class="player-card card">
+                <div class="rank-tag">#1</div>
+                <h3>YOICHI ISAGI</h3>
+                <p class="current-value">Valor de Mercado: €150.000.000</p>
+                
+                <div class="player-image-placeholder">
+                    <img src="Yoichi.jpg" alt="Yoichi Isagi" class="player-img">
+                </div>
+                
+                <p class="weapon">Weapon: VISÃO ESPACIAL / FARO</p>
+                
+                <h4 class="skill-tree-title">ÁRVORE DE HABILIDADES:</h4>
+                <div class="skill-tree">
+                    <div class="skill-item">
+                        <small>REMATAR (Shooting)</small><div class="skill-bar stats-shooting"></div>
+                    </div>
+                    <div class="skill-item">
+                        <small>VISÃO DE JOGO (Vision)</small><div class="skill-bar stats-vision"></div>
+                    </div>
+                    <div class="skill-item">
+                        <small>DRIBBLAR (Dribbling)</small><div class="skill-bar stats-dribbling"></div>
+                    </div>
+                    <div class="skill-item">
+                        <small>DEFESA (Defence)</small><div class="skill-bar stats-defence"></div>
+                    </div>
+                    <div class="skill-item">
+                        <small>EGO PESSOAL</small><div class="skill-bar stats-ego"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="rin" class="player-card card">
+                <div class="rank-tag">#2</div>
+                <h3>RIN ITOSHI</h3>
+                <p class="current-value">Valor de Mercado: €140.000.000</p>
+                
+                <div class="player-image-placeholder">
+                    <img src="Rin.jpg" alt="Rin Itoshi" class="player-img">
+                </div>
+                
+                <p class="weapon">Weapon: FUTEBOL DE CONTROLO / CHUTE PERFEITO</p>
+                
+                <h4 class="skill-tree-title">ÁRVORE DE HABILIDADES:</h4>
+                <div class="skill-tree">
+                    <div class="skill-item">
+                        <small>REMATAR (Shooting)</small><div class="skill-bar rin-shooting"></div>
+                    </div>
+                    <div class="skill-item">
+                        <small>VISÃO DE JOGO (Vision)</small><div class="skill-bar rin-vision"></div>
+                    </div>
+                    <div class="skill-item">
+                        <small>DRIBBLAR (Dribbling)</small><div class="skill-bar rin-dribbling"></div>
+                    </div>
+                    <div class="skill-item">
+                        <small>DEFESA (Defence)</small><div class="skill-bar rin-defence"></div>
+                    </div>
+                    <div class="skill-item">
+                        <small>EGO PESSOAL</small><div class="skill-bar rin-ego"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-info"><p>&copy; 2025 Projeto de TI - Rafael Dias e Manuel Santos</p></div>
+        <div class="footer-qr"><img src ="https://jaeger372.github.io/ProjetoTI/qr-code.png" width="70" alt="QR Code Projeto de TI"></div>
+    </footer>
+</body>
+
+
+(Jogadores CSS)
+
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.player-card {
+    border-radius: 8px;
+    position: relative;
+}
+
+.rank-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-fundo);
+    padding: 5px 15px;
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+}
+
+.player-img {
+    width: 100%;
+    max-width: 250px; 
+    height: auto;
+    display: block;
+    margin: 10px auto 20px auto;
+    border: 3px solid var(--cor-principal);
+    border-radius: 50%;
+}
+
+.current-value {
+    color: var(--cor-suporte);
+    margin-bottom: 10px;
+}
+
+.weapon {
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.skill-tree-title {
+    color: var(--cor-secundaria);
+    margin-top: 25px;
+    font-size: 1.1em;
+    border-bottom: 1px dashed var(--cor-suporte);
+    padding-bottom: 5px;
+}
+
+.skill-item {
+    margin-bottom: 10px;
+}
+
+.skill-item small {
+    color: var(--cor-principal);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 3px;
+    font-family: var(--fonte-titulo);
+}
+
+.skill-bar {
+    background-color: var(--cor-fundo-card);
+    height: 8px;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-bar::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background-color: var(--cor-principal); 
+    border-radius: 4px;
+    transition: width 0.5s ease-out;
+    left: 0;
+}
+
+
+.stats-shooting::after { width: 85%; background-color: var(--cor-secundaria); } 
+.stats-vision::after { width: 98%; background-color: var(--cor-principal); } 
+.stats-dribbling::after { width: 70%; }
+.stats-defence::after { width: 50%; }
+.stats-ego::after { width: 95%; background-color: #2d012c; } 
+
+.rin-shooting::after { width: 95%; background-color: var(--cor-principal); } 
+.rin-vision::after { width: 88%; background-color: var(--cor-secundaria); } 
+.rin-dribbling::after { width: 80%; }
+.rin-defense::after { width: 65%; }
+.rin-ego::after { width: 90%; background-color: #c90036; }
+
+
+</html>
