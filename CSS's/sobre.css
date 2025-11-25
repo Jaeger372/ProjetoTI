@@ -1,0 +1,166 @@
+:root {
+    --cor-principal: #0d1b86;       /* Azul Elétrico Vibrante (Cor da Camisola/Destaque) */
+    --cor-secundaria: #fe326c;       /* Laranja/Vermelho Intenso (Cor de EGO/Contraste) */
+    --cor-fundo: #0A0A1F;           /* Azul Marinho Muito Escuro (Fundo Principal) */
+    --cor-fundo-cartao: #1B1B33;    /* Azul Escuro Subtil (Fundo dos Cartões) */
+    --cor-texto: #FFFFFF;  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px  1px 0 #000,1px  1px 0 #000;
+    --cor-suporte: #AAAAAA;         /* Cinza Claro para Textos de Suporte */
+    --fonte-titulo: 'Oswald', sans-serif;
+    --fonte-corpo: 'Roboto', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-corpo);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4 
+{
+    font-family: var(--fonte-titulo);
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+a {
+    color: var(--cor-principal);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--cor-secundaria);
+}
+
+section {
+    padding: 80px 5%;
+    flex-grow: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* -------------------------------------- */
+/* ESTILOS DO CABEÇALHO (HEADER) */
+/* -------------------------------------- */
+header {
+    background-color: var(--cor-fundo);
+    border-bottom: 3px solid var(--cor-principal);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Classe: .logotipo (substitui .logo) */
+.logotipo {
+    font-size: 2em;
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: var(--fonte-titulo);
+}
+
+nav a {
+    color: var(--cor-texto);
+    text-transform: uppercase;
+    margin-left: 30px;
+    padding: 10px 5px;
+    border-bottom: 2px solid transparent;
+    font-family: var(--fonte-titulo);
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+/* Classe: .ativo (substitui .active) */
+nav a:hover, nav a.ativo {
+    color: var(--cor-principal);
+    border-bottom: 2px solid var(--cor-principal);
+}
+
+/* -------------------------------------- */
+/* ESTILOS DA SEÇÃO 'SOBRE' */
+/* -------------------------------------- */
+
+/* Classe: .titulo-secao (substitui .section-title) */
+.titulo-secao {
+    color: var(--cor-secundaria);
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    border-left: 4px solid var(--cor-principal);
+    padding-left: 15px;
+    display: block;
+    letter-spacing: 1px;
+}
+
+/* Classe: .subtitulo (substitui .subtitle) */
+.subtitulo {
+    font-size: 1.1em;
+    color: var(--cor-suporte);
+    margin-bottom: 50px;
+}
+
+/* Estilos Específicos do GRID de Regras */
+.regras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Estilos do Cartão (substitui .card) */
+.cartao {
+    background-color: var(--cor-fundo-cartao);
+    padding: 30px;
+    border-left: 3px solid var(--cor-secundaria);
+    transition: border-left 0.3s, transform 0.3s;
+    border-radius: 4px;
+}
+
+.cartao:hover {
+    border-left: 5px solid var(--cor-principal);
+    transform: translateY(-3px);
+}
+
+.regra-card h3 {
+    color: var(--cor-principal);
+    margin-bottom: 15px;
+}
+
+/* -------------------------------------- */
+/* ESTILOS DO RODAPÉ (FOOTER) */
+/* -------------------------------------- */
+footer {
+    background-color: var(--cor-fundo);
+    color: var(--cor-suporte);
+    padding: 25px 5%;
+    border-top: 3px solid var(--cor-secundaria);
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: auto; /* Garante que o rodapé fica no fim da página */
+}
+
+/* Classe: .rodape-qr (substitui .footer-qr) */
+.rodape-qr img {
+    width: 70px;
+    height: 70px;
+    border: 2px solid var(--cor-principal);
+    padding: 5px;
+}

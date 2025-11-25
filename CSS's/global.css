@@ -1,0 +1,190 @@
+:root {
+    --cor-principal: #0d1b86;       /* Azul Elétrico Vibrante (Cor da Camisola/Destaque) */
+    --cor-secundaria: #fe326c;       /* Laranja/Vermelho Intenso (Cor de EGO/Contraste) */
+    --cor-fundo: #0A0A1F;           /* Azul Marinho Muito Escuro (Fundo Principal) */
+    --cor-fundo-cartao: #1B1B33;    /* Azul Escuro Subtil (Fundo dos Cartões) */
+    --cor-texto: #FFFFFF;  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px  1px 0 #000,1px  1px 0 #000;
+    --cor-suporte: #AAAAAA;         /* Cinza Claro para Textos de Suporte */
+    --fonte-titulo: 'Oswald', sans-serif;
+    --fonte-corpo: 'Roboto', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body 
+{
+    background-color: var(--cor-fundo);
+    background-image: url(../imagens/background1.png);
+    background-position: 100%;
+    color: var(--cor-texto);
+    background-repeat: no-repeat;
+    font-family: var(--fonte-corpo);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+h1, h2, h3, h4 
+{
+    font-family: var(--fonte-titulo);
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+a 
+{
+    color: var(--cor-principal);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover 
+{
+    color: var(--cor-secundaria);
+}
+
+section 
+{
+    padding: 80px 5%;
+    flex-grow: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+header 
+{
+    background-color: var(--cor-fundo);
+    border-bottom: 3px solid var(--cor-principal);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Classe original: .logo */
+.logotipo {
+    font-size: 2em;
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: var(--fonte-titulo);
+}
+
+nav a {
+    color: var(--cor-texto);
+    text-transform: uppercase;
+    margin-left: 30px;
+    padding: 10px 5px;
+    border-bottom: 2px solid transparent;
+    font-family: var(--fonte-titulo);
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+/* Classe original: .active */
+nav a:hover, nav a.ativo {
+    color: var(--cor-principal);
+    border-bottom: 2px solid var(--cor-principal);
+}
+
+/* Classe original: .section-title */
+.titulo-secao {
+    color: var(--cor-secundaria);
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    border-left: 4px solid var(--cor-principal);
+    padding-left: 15px;
+    display: block;
+    letter-spacing: 1px;
+}
+
+/* Classe original: .subtitle */
+.subtitulo {
+    font-size: 1.1em;
+    color: var(--cor-suporte);
+    margin-bottom: 50px;
+}
+
+/* Classe original: .card */
+.cartao {
+    background-color: var(--cor-fundo-cartao);
+    padding: 30px;
+    border-left: 3px solid var(--cor-secundaria);
+    transition: border-left 0.3s, transform 0.3s;
+    border-radius: 4px;
+}
+
+.cartao:hover {
+    border-left: 5px solid var(--cor-principal);
+    transform: translateY(-3px);
+}
+
+footer {
+    background-color: var(--cor-fundo);
+    color: var(--cor-suporte);
+    padding: 25px 5%;
+    border-top: 3px solid var(--cor-secundaria);
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Classe original: .footer-qr */
+.rodape-qr img {
+    width: 70px;
+    height: 70px;
+    border: 2px solid var(--cor-principal);
+    padding: 5px;
+}
+
+/* Classe original: .team-logo-detail */
+.detalhe-logo-equipa {
+    max-width: 250px; 
+    border: 5px solid var(--cor-secundaria); 
+    border-radius: 10px;
+}
+
+/* Classe original: .master-tag */
+.tag-mestre { 
+    color: var(--cor-secundaria); 
+    font-style: italic; 
+    margin-bottom: 20px; 
+    display: block; 
+}
+
+/* Classe original: .player-list */
+.lista-jogadores h2 { 
+    margin-top: 30px; 
+    border-left: 5px solid var(--cor-principal); 
+    padding-left: 10px; 
+    color: var(--cor-secundaria);
+}
+
+.lista-jogadores ul { 
+    list-style: none; 
+    padding: 0; 
+}
+
+.lista-jogadores li { 
+    background-color: var(--cor-fundo-cartao); 
+    padding: 10px; 
+    margin-bottom: 8px; 
+    border-radius: 5px; 
+    border-left: 5px solid var(--cor-principal); 
+}
+
+/* Blocos @media removidos conforme solicitado. */
