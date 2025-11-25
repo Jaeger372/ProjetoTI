@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de TI - Curiosidades</title>
+    <link rel="stylesheet" href="../CSS's/global.css">
+    <link rel="stylesheet" href="../CSS's/curiosidades.css">
+</head>
+<body>
+    <header>
+        <div class="logotipo">BLUE LOCK PROJETO</div>
+        <nav>
+            <a href="pagina principal.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="equipas.html">Equipas</a>
+            <a href="jogadores.html">Jogadores</a>
+            <a href="cronologia.html">Cronologia</a>
+            <a href="curiosidades.html" class="ativo">Curiosidades</a>
+            <a href="suporte.html">Suporte</a>
+        </nav>
+    </header>
+
+    <section class="secao-curiosidades">
+        <h1 class="titulo-secao">CURIOSIDADES TÉCNICAS E SEGREDOS</h1>
+        <p class="subtitulo">Factos menos conhecidos sobre a mecânica de jogo e a infraestrutura do Blue Lock.</p>
+        
+        <div class="contentor-acordeao">
+            <div class="item-acordeao">
+                <button class="cabecalho-acordeao">O que é o "Faro" (Metavision)?</button>
+                <div class="conteudo-acordeao">
+                    <p>É uma forma avançada de Visão Espacial que permite aos jogadores processar o campo de visão inteiro em tempo real, monitorizando 22 jogadores e a bola simultaneamente, para encontrar o melhor caminho para o golo.</p>
+                </div>
+            </div>
+
+            
+            <div class="item-acordeao">
+                <button class="cabecalho-acordeao">Como são calculados os valores de mercado?</button>
+                <div class="conteudo-acordeao">
+                    <p>O valor de mercado é determinado por uma combinação de fatores: pontuação no ranking interno, desempenho nas partidas da Liga Neo-Egoísta (golos, assistências e contribuição tática), e o interesse/propostas reais de clubes europeus.</p>
+                </div>
+            </div>
+
+            <div class="item-acordeao">
+                <button class="cabecalho-acordeao">Qual é a tecnologia da instalação Blue Lock?</button>
+                <div class="conteudo-acordeao">
+                    <p>A instalação usa tecnologia de ponta para monitorização de desempenho e saúde, incluindo câmaras 360º, sensores de movimento e sistemas de treino de realidade aumentada para simular cenários de jogo complexos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-info"><p>&copy; 2025 Projeto de TI - Rafael Dias e Manuel Santos</p></div>
+        <div class="footer-qr"><img src ="https://jaeger372.github.io/ProjetoTI/qr-code.png" width="70" alt="QR Code Projeto de TI"></div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.cabecalho-acordeao').forEach(botao => {
+            botao.addEventListener('click', () => {
+                const conteudo = botao.nextElementSibling;
+                botao.classList.toggle('ativo');
+                if (botao.classList.contains('ativo')) {
+                    conteudo.style.maxHeight = conteudo.scrollHeight + 'px';
+                } else {
+                    conteudo.style.maxHeight = 0;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

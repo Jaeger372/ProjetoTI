@@ -1,3 +1,10 @@
+:root 
+{
+    --cor-fundo-cartao: #1B1B33;  
+    --cor-texto: #FFFFFF;  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px  1px 0 #000,1px  1px 0 #000;
+}
+
+
 
 .hero-index 
 {
@@ -30,7 +37,7 @@
 .cta-button 
 {
     background-color: var(--cor-secundaria);
-    color: var(--cor-fundo);
+    color: black;
     padding: 15px 30px;
     text-transform: uppercase;
     font-size: 1.1em;
@@ -42,7 +49,8 @@
 
 .cta-button:hover 
 {
-    background-color: #ff884d;
+    background-color: #0c1a85;
+    color: #000;
     transform: scale(1.05);
 }
 
@@ -52,4 +60,20 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 40px;
+}
+
+body 
+{
+    background-color: var(--cor-fundo);
+    background-image: url(../imagens/background1.png);
+    background-position: 100%;
+    color: var(--cor-texto);
+    background-repeat: no-repeat;
+    font-family: var(--fonte-corpo);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size:cover;
+    background-attachment: fixed;
 }

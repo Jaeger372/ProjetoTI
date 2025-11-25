@@ -1,0 +1,15 @@
+:root 
+{
+    --cor-principal: #A50044;
+    --cor-secundaria: #004D98;
+}
+
+img 
+{
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover
+{
+    transform: scale(1.05);
+}
