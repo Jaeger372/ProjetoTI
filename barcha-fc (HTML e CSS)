@@ -1,0 +1,61 @@
+(BarchaFC HTML)
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcha FC - Blue Lock</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="barcha.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BLUE LOCK PROJETO</div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="equipas.html" class="active">Equipas</a>
+            <a href="jogadores.html">Jogadores</a>
+            <a href="cronologia.html">Cronologia</a>
+            <a href="curiosidades.html">Curiosidades</a>
+            <a href="suporte.html">Suporte</a>
+        </nav>
+    </header>
+
+    <section class="team-detail-section">
+        <h1 class="section-title">BARCHA FC</h1>
+        <p class="master-tag">Mestre Tático: Lavinho (O Mestre da Imprevisibilidade)</p>
+        
+        <div style="text-align: center; margin: 30px 0;">
+            <img src="barcha.png" alt="Logo Barcha FC" class="team-logo-detail">
+        </div>
+
+        <p>A equipa espanhola, inspirada no "futebol arte", é liderada pelo jogador mais criativo, **Lavinho**. O Barcha FC é o reino da **improvisação** e do **futebol de fantasia**, onde a técnica individual e a alegria de jogar são priorizadas acima da rigidez tática. O jogo é visto como uma dança criativa.</p>
+        
+        <h2>FILOSOFIA: "Futebol Arte e Liberdade Total"</h2>
+        <p>O Barcha FC oferece liberdade total aos seus criadores de jogo, permitindo-lhes expressar o seu "Ego" através de *dribbles* e passes inesperados. O foco está na posse de bola criativa e nos ataques gerados pela genialidade momentânea.</p>
+        
+        <div class="player-list">
+            <h2>JOGADORES CHAVE DE BLUE LOCK</h2>
+            <ul>
+                <li>Bachira Meguru (Avançado/Meio-campo Criativo)</li>
+                <li>Eita Otoya (Avançado/FW)</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-info"><p>&copy; 2025 Projeto de TI - Rafael Dias e Manuel Santos</p></div>
+        <div class="footer-qr"><img src ="https://jaeger372.github.io/ProjetoTI/qr-code.png" width="70" alt="QR Code Projeto de TI"></div>
+    </footer>
+</body>
+</html>
+
+
+(BarchaFC CSS)
+
+:root {
+    --cor-principal: #A50044;
+    --cor-secundaria: #004D98;
+}
