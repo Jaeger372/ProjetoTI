@@ -1,0 +1,84 @@
+(Suporte HTML)
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de TI - Suporte</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="suporte.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BLUE LOCK PROJETO</div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="equipas.html">Equipas</a>
+            <a href="jogadores.html">Jogadores</a>
+            <a href="cronologia.html">Cronologia</a>
+            <a href="curiosidades.html">Curiosidades</a>
+            <a href="suporte.html" class="active">Suporte</a>
+        </nav>
+    </header>
+    <section class="suporte-section">
+        <h1 class="section-title">CANAIS DE COMUNICAÇÃO E SUPORTE</h1>
+        <p class="subtitle">Contacte o Staff de Suporte Técnico ou a Linha Direta para Egos em Crise.</p>
+        
+        <div class="suporte-grid">
+            <div class="card suporte-card">
+                <h3>Staff Técnico (TI)</h3>
+                <p>Para relatórios de erros no ranking, problemas de visualização ou questões administrativas da Liga Neo-Egoísta.</p>
+                <a href="mailto:staff@bluelock.jp" class="contact-button">Enviar E-mail</a>
+            </div>
+            <div class="card suporte-card">
+                <h3>Linha Direta Ego</h3>
+                <p>Linha de crise para avançados que sintam o seu Ego a enfraquecer ou necessitem de motivação urgente.</p>
+                <a href="#" class="contact-button">Formulário de Crise</a>
+            </div>
+            <div class="card suporte-card">
+                <h3>Suporte ao Mestre</h3>
+                <p>Canal exclusivo para comunicação direta com os Mestres da Liga Neo-Egoísta (Noa, Loki, Snuffy, etc.).</p>
+                <a href="#" class="contact-button">Acesso Restrito</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-info"><p>&copy; 2025 Projeto de TI - Rafael Dias e Manuel Santos</p></div>
+        <div class="footer-qr"><img src ="https://jaeger372.github.io/ProjetoTI/qr-code.png" width="70" alt="QR Code Projeto de TI"></div>
+    </footer>
+</body>
+</html>
+
+
+(Suporte CSS)
+
+
+.suporte-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.suporte-card h3 {
+    color: var(--cor-principal);
+    margin-bottom: 15px;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-fundo);
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #ff884d;
+}
