@@ -1,11 +1,10 @@
-
 :root {
-    --cor-principal: #2A7CD9;      
-    --cor-secundaria: #D95B2A;    
-    --cor-fundo: #141414;          
-    --cor-fundo-card: #222222;     
-    --cor-texto: #FFFFFF;
-    --cor-suporte: #888888;
+    --cor-principal: #0d1b86;       /* Azul Elétrico Vibrante (Cor da Camisola/Destaque) */
+    --cor-secundaria: #fe326c;       /* Laranja/Vermelho Intenso (Cor de EGO/Contraste) */
+    --cor-fundo: #0A0A1F;           /* Azul Marinho Muito Escuro (Fundo Principal) */
+    --cor-fundo-cartao: #1B1B33;    /* Azul Escuro Subtil (Fundo dos Cartões) */
+    --cor-texto: #FFFFFF;  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px  1px 0 #000,1px  1px 0 #000;
+    --cor-suporte: #AAAAAA;         /* Cinza Claro para Textos de Suporte */
     --fonte-titulo: 'Oswald', sans-serif;
     --fonte-corpo: 'Roboto', sans-serif;
 }
@@ -18,33 +17,43 @@
     padding: 0;
 }
 
-body {
+body 
+{
     background-color: var(--cor-fundo);
+    background-image: url(background1.png);
+    background-position: 100%;
     color: var(--cor-texto);
+    background-repeat: no-repeat;
     font-family: var(--fonte-corpo);
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-size:cover;
+    background-attachment: fixed;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4 
+{
     font-family: var(--fonte-titulo);
     text-transform: uppercase;
     line-height: 1.2;
 }
 
-a {
+a 
+{
     color: var(--cor-principal);
     text-decoration: none;
     transition: color 0.3s;
 }
 
-a:hover {
+a:hover 
+{
     color: var(--cor-secundaria);
 }
 
-section {
+section 
+{
     padding: 80px 5%;
     flex-grow: 1;
     max-width: 1400px;
@@ -52,8 +61,9 @@ section {
     width: 100%;
 }
 
-header {
-    background-color: #000000;
+header 
+{
+    background-color: var(--cor-fundo);
     border-bottom: 3px solid var(--cor-principal);
     padding: 15px 5%;
     display: flex;
@@ -64,7 +74,8 @@ header {
     z-index: 1000;
 }
 
-.logo {
+/* Classe original: .logo */
+.logotipo {
     font-size: 2em;
     color: var(--cor-secundaria);
     font-weight: bold;
@@ -82,12 +93,14 @@ nav a {
     transition: color 0.3s, border-bottom 0.3s;
 }
 
-nav a:hover, nav a.active {
+/* Classe original: .active */
+nav a:hover, nav a.ativo {
     color: var(--cor-principal);
     border-bottom: 2px solid var(--cor-principal);
 }
 
-.section-title {
+/* Classe original: .section-title */
+.titulo-secao {
     color: var(--cor-secundaria);
     font-size: 2.5em;
     margin-bottom: 40px;
@@ -97,27 +110,29 @@ nav a:hover, nav a.active {
     letter-spacing: 1px;
 }
 
-.subtitle {
+/* Classe original: .subtitle */
+.subtitulo {
     font-size: 1.1em;
     color: var(--cor-suporte);
     margin-bottom: 50px;
 }
 
-.card {
-    background-color: var(--cor-fundo-card);
+/* Classe original: .card */
+.cartao {
+    background-color: var(--cor-fundo-cartao);
     padding: 30px;
     border-left: 3px solid var(--cor-secundaria);
     transition: border-left 0.3s, transform 0.3s;
     border-radius: 4px;
 }
 
-.card:hover {
+.cartao:hover {
     border-left: 5px solid var(--cor-principal);
     transform: translateY(-3px);
 }
 
 footer {
-    background-color: #000000;
+    background-color: var(--cor-fundo);
     color: var(--cor-suporte);
     padding: 25px 5%;
     border-top: 3px solid var(--cor-secundaria);
@@ -128,69 +143,48 @@ footer {
     width: 100%;
 }
 
-.footer-qr img {
+/* Classe original: .footer-qr */
+.rodape-qr img {
     width: 70px;
     height: 70px;
     border: 2px solid var(--cor-principal);
     padding: 5px;
 }
 
-.team-logo-detail {
+/* Classe original: .team-logo-detail */
+.detalhe-logo-equipa {
     max-width: 250px; 
     border: 5px solid var(--cor-secundaria); 
     border-radius: 10px;
 }
 
-.master-tag { 
+/* Classe original: .master-tag */
+.tag-mestre { 
     color: var(--cor-secundaria); 
     font-style: italic; 
     margin-bottom: 20px; 
     display: block; 
 }
 
-.player-list h2 { 
+/* Classe original: .player-list */
+.lista-jogadores h2 { 
     margin-top: 30px; 
     border-left: 5px solid var(--cor-principal); 
     padding-left: 10px; 
     color: var(--cor-secundaria);
 }
 
-.player-list ul { 
+.lista-jogadores ul { 
     list-style: none; 
     padding: 0; 
 }
 
-.player-list li { 
-    background-color: var(--cor-fundo-card); 
+.lista-jogadores li { 
+    background-color: var(--cor-fundo-cartao); 
     padding: 10px; 
     margin-bottom: 8px; 
     border-radius: 5px; 
     border-left: 5px solid var(--cor-principal); 
 }
 
-@media (max-width: 900px) {
-    header {
-        flex-direction: column;
-    }
-    nav {
-        margin-top: 15px;
-        text-align: center;
-    }
-    nav a {
-        margin: 0 10px;
-        display: inline-block;
-    }
-    .section-title {
-        font-size: 2em;
-    }
-}
-
-@media (max-width: 600px) {
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-    .footer-qr {
-        margin-top: 15px;
-    }
-}
+/* Blocos @media removidos conforme solicitado. */
