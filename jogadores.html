@@ -22,77 +22,93 @@
     </header>
     
     <section class="players-section">
-        <h1 class="section-title">OS EGOS: ANÁLISE DETALHADA DOS AVANÇADOS</h1>
-        <p class="subtitle">O valor de mercado atual e as capacidades técnicas dos melhores produtos do Blue Lock.</p>
+        <h1 class="section-title">OS EGOS: RANKING FINAL DA LIGA NEO EGOIST</h1>
+        <p class="subtitle">Valores oficiais divulgados pelo Ego Jinpachi após a conclusão do projeto Blue Lock.</p>
         
         <div class="players-grid">
-            <div id="isagi" class="player-card card">
+
+            <!-- YOICHI ISAGI - #1 Mundial (final do arco) -->
+            <div class="player-card">
                 <div class="rank-tag">#1</div>
                 <h3>YOICHI ISAGI</h3>
                 <p class="current-value">Valor de Mercado: 240.000.000¥</p>
+                <img src="Yoichi.jpg" alt="Yoichi Isagi" class="player-img">
+                <p class="weapon">Weapon: Meta Vision + Direct Shoot</p>
                 
-                <div class="player-image-placeholder">
-                    <img src="Yoichi.jpg" alt="Yoichi Isagi" class="player-img">
-                </div>
-                
-                <p class="weapon">Weapon: VISÃO ESPACIAL / FARO</p>
-                
-                <h4 class="skill-tree-title">ÁRVORE DE HABILIDADES:</h4>
-                <div class="skill-tree">
-                    <div class="skill-item">
-                        <small>REMATAR (Shooting)</small><div class="skill-bar stats-shooting"></div>
-                    </div>
-                    <div class="skill-item">
-                        <small>VISÃO DE JOGO (Vision)</small><div class="skill-bar stats-vision"></div>
-                    </div>
-                    <div class="skill-item">
-                        <small>DRIBBLAR (Dribbling)</small><div class="skill-bar stats-dribbling"></div>
-                    </div>
-                    <div class="skill-item">
-                        <small>DEFESA (Defence)</small><div class="skill-bar stats-defence"></div>
-                    </div>
-                    <div class="skill-item">
-                        <small>EGO PESSOAL</small><div class="skill-bar stats-ego"></div>
+                <h4 class="radar-title">RADAR DE ATRIBUTOS</h4>
+                <div class="radar-container">
+                    <div class="radar">
+                        <!-- Fundo -->
+                        <svg viewBox="0 0 200 200" class="grid">
+                            <polygon points="100,15 155,55 155,145 100,185 45,145 45,55" fill="none" stroke="#444" stroke-width="1"/>
+                            <polygon points="100,35 141,73 141,127 100,165 59,127 59,73" fill="none" stroke="#444" stroke-width="1"/>
+                            <polygon points="100,55 127,90 127,110 100,145 73,110 73,90" fill="none" stroke="#444" stroke-width="1"/>
+                            <line x1="100" y1="15" x2="100" y2="185" stroke="#444" stroke-width="1"/>
+                            <line x1="45" y1="55" x2="155" y2="145" stroke="#444" stroke-width="1"/>
+                            <line x1="155" y1="55" x2="45" y2="145" stroke="#444" stroke-width="1"/>
+                        </svg>
+
+                        <!-- Dados Isagi (valores finais Neo Egoist) -->
+                        <svg viewBox="0 0 200 200" class="data">
+                            <polygon points="100,28 148,68 142,130 100,142 58,130 52,68"
+                                     fill="#0066cc44" stroke="#0066cc" stroke-width="3.5"/>
+                        </svg>
+
+                        <div class="label speed"   data-value="89">SPEED</div>
+                        <div class="label offense" data-value="92">OFFENSE</div>
+                        <div class="label shoot"   data-value="94">SHOOT</div>
+                        <div class="label dribble" data-value="93">DRIBBLE</div>
+                        <div class="label pass"    data-value="98">PASS</div>
+                        <div class="label defense" data-value="82">DEFENSE</div>
+
+                        <div class="overall">95</div>
                     </div>
                 </div>
             </div>
 
-            <div id="rin" class="player-card card">
+            <!-- RIN ITOSHI - #2 Mundial -->
+            <div class="player-card">
                 <div class="rank-tag">#2</div>
                 <h3>RIN ITOSHI</h3>
                 <p class="current-value">Valor de Mercado: 240.000.000¥</p>
+                <img src="Rin.jpg" alt="Rin Itoshi" class="player-img">
+                <p class="weapon">Weapon: Trivela Perfeita + Flow State</p>
                 
-                <div class="player-image-placeholder">
-                    <img src="Rin.jpg" alt="Rin Itoshi" class="player-img">
-                </div>
-                
-                <p class="weapon">Weapon: FUTEBOL DE CONTROLO / CHUTE PERFEITO</p>
-                
-                <h4 class="skill-tree-title">ÁRVORE DE HABILIDADES:</h4>
-                <div class="skill-tree">
-                    <div class="skill-item">
-                        <small>REMATAR (Shooting)</small><div class="skill-bar rin-shooting"></div>
-                    </div>
-                    <div class="skill-item">
-                        <small>VISÃO DE JOGO (Vision)</small><div class="skill-bar rin-vision"></div>
-                    </div>
-                    <div class="skill-item">
-                        <small>DRIBBLAR (Dribbling)</small><div class="skill-bar rin-dribbling"></div>
-                    </div>
-                    <div class="skill-item">
-                        <small>DEFESA (Defence)</small><div class="skill-bar rin-defence"></div>
-                    </div>
-                    <div class="skill-item">
-                        <small>EGO PESSOAL</small><div class="skill-bar rin-ego"></div>
+                <h4 class="radar-title">RADAR DE ATRIBUTOS</h4>
+                <div class="radar-container">
+                    <div class="radar">
+                        <svg viewBox="0 0 200 200" class="grid">
+                            <polygon points="100,15 155,55 155,145 100,185 45,145 45,55" fill="none" stroke="#444" stroke-width="1"/>
+                            <polygon points="100,35 141,73 141,127 100,165 59,127 59,73" fill="none" stroke="#444" stroke-width="1"/>
+                            <polygon points="100,55 127,90 127,110 100,145 73,110 73,90" fill="none" stroke="#444" stroke-width="1"/>
+                            <line x1="100" y1="15" x2="100" y2="185" stroke="#444" stroke-width="1"/>
+                            <line x1="45" y1="55" x2="155" y2="145" stroke="#444" stroke-width="1"/>
+                            <line x1="155" y1="55" x2="45" y2="145" stroke="#444" stroke-width="1"/>
+                        </svg>
+
+                        <svg viewBox="0 0 200 200" class="data">
+                            <polygon points="100,32 152,62 138,138 100,132 62,138 48,62"
+                                     fill="#00883344" stroke="#008833" stroke-width="3.5"/>
+                        </svg>
+
+                        <div class="label speed"   data-value="88">SPEED</div>
+                        <div class="label offense" data-value="98">OFFENSE</div>
+                        <div class="label shoot"   data-value="99">SHOOT</div>
+                        <div class="label dribble" data-value="96">DRIBBLE</div>
+                        <div class="label pass"    data-value="94">PASS</div>
+                        <div class="label defense" data-value="86">DEFENSE</div>
+
+                        <div class="overall">97</div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
     <footer>
         <div class="footer-info"><p>&copy; 2025 Projeto de TI - Rafael Dias e Manuel Santos</p></div>
-        <div class="footer-qr"><img src ="https://jaeger372.github.io/ProjetoTI/qr-code.png" width="70" alt="QR Code Projeto de TI"></div>
+        <div class="footer-qr"><img src="https://jaeger372.github.io/ProjetoTI/qr-code.png" width="70" alt="QR Code Projeto de TI"></div>
     </footer>
 </body>
 </html>
