@@ -1,0 +1,32 @@
+.regras-grid 
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+
+
+.regra-card h3 
+{
+    color: #fe326c;
+    margin-bottom: 15px;
+}
+
+
+body 
+{
+    background-color: var(--cor-fundo);
+    background-image: url(../imagens/background1.png);
+    background-position: 100%;
+    color: var(--cor-texto);
+    background-repeat: no-repeat;
+    font-family: var(--fonte-corpo);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size:cover;
+    background-attachment: fixed;
+}

@@ -1,0 +1,79 @@
+:root 
+{
+    --cor-fundo-cartao: #1B1B33;  
+    --cor-texto: #FFFFFF;  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px  1px 0 #000,1px  1px 0 #000;
+}
+
+
+
+.hero-index 
+{
+    background: url('fundo-hero-index.jpg') no-repeat center center / cover;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+}
+
+.hero-title 
+{
+    font-size: 3.5em;
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+    max-width: 800px;
+}
+
+.hero-subtitle 
+{
+    font-size: 1.5em;
+    color: var(--cor-texto);
+    margin-bottom: 40px;
+}
+
+.cta-button 
+{
+    background-color: var(--cor-secundaria);
+    color: black;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.cta-button:hover 
+{
+    background-color: #0c1a85;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.destaque-grid 
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+body 
+{
+    background-color: var(--cor-fundo);
+    background-image: url(../imagens/background1.png);
+    background-position: 100%;
+    color: var(--cor-texto);
+    background-repeat: no-repeat;
+    font-family: var(--fonte-corpo);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size:cover;
+    background-attachment: fixed;
+}
