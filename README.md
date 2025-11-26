@@ -5,5 +5,6 @@ Projeto Final da Disciplina de Tecnologias de Internet
 Rafael Dias e Manuel Santos
 
 ## Link para o site
-[Blue Lock Home Page](https://jaeger372.github.io/ProjetoTI/Páginas%20HTML/index.html)
+([Blue Lock Main Page](https://jaeger372.github.io/ProjetoTI/P%C3%A1ginas%20HTML/pagina%20principal.html))
+
 <img src ="https://jaeger372.github.io/ProjetoTI/qr-code.png" width="150">
