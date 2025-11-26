@@ -1,5 +1,6 @@
-/* jogadores.css - Versão PROFISSIONAL e LIMPA */
-.players-grid {
+
+.players-grid 
+{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 40px;
@@ -8,7 +9,8 @@
     margin: 0 auto;
 }
 
-.player-card {
+.player-card 
+{
     background: #0f111a;
     border-radius: 12px;
     padding: 28px;
@@ -19,14 +21,16 @@
     position: relative;
 }
 
-.player-card:hover {
+.player-card:hover 
+{
     transform: translateY(-6px);
 }
 
-.rank-tag {
+.rank-tag 
+{
     position: absolute;
     top: 0; right: 0;
-    background: #ffd700;
+    background: #d51f6e;
     color: #000;
     padding: 8px 20px;
     font-weight: 900;
@@ -34,7 +38,8 @@
     clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-.player-img {
+.player-img 
+{
     width: 220px;
     height: 220px;
     object-fit: cover;
@@ -44,48 +49,55 @@
     display: block;
 }
 
-.current-value {
+.current-value 
+{
     font-size: 1.4em;
     font-weight: bold;
     color: #00ddff;
     margin: 12px 0;
 }
 
-.weapon {
+.weapon 
+{
     font-size: 1.1em;
     color: #aaa;
     font-style: italic;
     margin: 10px 0 25px;
 }
 
-.radar-title {
+.radar-title 
+{
     margin: 30px 0 15px;
     font-size: 1.3em;
     color: #fff;
     letter-spacing: 1px;
 }
 
-/* Radar limpo e profissional */
-.radar-container {
+
+.radar-container 
+{
     width: 260px;
     height: 260px;
     margin: 0 auto;
     position: relative;
 }
 
-.radar {
+.radar 
+{
     width: 100%;
     height: 100%;
     position: relative;
 }
 
-.radar svg {
+.radar svg 
+{
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
 }
 
-.label {
+.label 
+{
     position: absolute;
     font-size: 11px;
     font-weight: bold;
@@ -96,7 +108,8 @@
 }
 
 /* Tooltip perfeito */
-.label::before {
+.label::before 
+{
     content: attr(data-value);
     position: absolute;
     bottom: 100%;
@@ -117,15 +130,17 @@
     z-index: 10;
 }
 
-.label:hover::before {
+.label:hover::before 
+{
     opacity: 1;
 }
 
-.label:hover {
+.label:hover 
+{
     color: #fff;
 }
 
-/* Posições exatas (sem translate extra) */
+
 .speed   { top: 8%;   left: 50%;  transform: translateX(-50%); }
 .offense { top: 26%;  right: 12%; }
 .shoot   { bottom: 26%; right: 12%; }
@@ -133,7 +148,8 @@
 .pass    { bottom: 26%; left: 12%; }
 .defense { top: 26%;  left: 12%; }
 
-.overall {
+.overall 
+{
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
@@ -143,8 +159,9 @@
     text-shadow: 0 0 10px rgba(255,255,255,0.3);
 }
 
-/* Responsivo */
-@media (max-width: 480px) {
+
+@media (max-width: 480px) 
+{
     .radar-container { width: 220px; height: 220px; }
     .overall { font-size: 50px; }
 }
