@@ -4,96 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto de TI - Jogadores</title>
-    <link rel="stylesheet" href="../CSS's/global.css">
-    <link rel="stylesheet" href="../CSS's/jogadores.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="jogadores.css">
 </head>
 <body>
     <header>
-        <div class="logotipo">BLUE LOCK PROJETO</div>
+        <div class="logo">BLUE LOCK PROJETO</div>
         <nav>
-            <a href="pagina principal.html">Início</a>
+            <a href="index.html">Início</a>
             <a href="sobre.html">Sobre</a>
             <a href="equipas.html">Equipas</a>
-            <a href="jogadores.html" class="ativo">Jogadores</a>
+            <a href="jogadores.html" class="active">Jogadores</a>
             <a href="cronologia.html">Cronologia</a>
             <a href="curiosidades.html">Curiosidades</a>
             <a href="suporte.html">Suporte</a>
         </nav>
     </header>
     
-    <section class="secao-jogadores">
-        <h1 class="titulo-secao">OS EGOS: ANÁLISE DETALHADA DOS AVANÇADOS</h1>
-        <p class="subtitulo">O valor de mercado atual e as capacidades técnicas dos melhores produtos do Blue Lock.</p>
+    <section class="players-section">
+        <h1 class="section-title">OS EGOS: RANKING FINAL DA LIGA NEO EGOIST</h1>
+        <p class="subtitle">Valores oficiais divulgados pelo Ego Jinpachi após a conclusão do projeto Blue Lock.</p>
         
-        <div class="grelha-jogadores">
-           
-            <div id="isagi" class="cartao-jogador">
-                <div class="etiqueta-rank">#1</div>
+        <div class="players-grid">
+
+            <!-- YOICHI ISAGI - #1 Mundial (final do arco) -->
+            <div class="player-card">
+                <div class="rank-tag">#1</div>
                 <h3>YOICHI ISAGI</h3>
-                <p class="valor-atual">Valor de Mercado: €150.000.000</p>
+                <p class="current-value">Valor de Mercado: 240.000.000¥</p>
+                <img src="Yoichi.jpg" alt="Yoichi Isagi" class="player-img">
+                <p class="weapon">Weapon: Meta Vision + Direct Shoot</p>
                 
-                <div class="contentor-imagem">
-                    <img src="../imagens/Yoichi.jpg" alt="Yoichi Isagi" class="img-jogador">
-                </div>
-                
-                <p class="arma">Arma: VISÃO ESPACIAL / FARO</p>
-                
-                <h4 class="titulo-arvore-habilidades">ÁRVORE DE HABILIDADES:</h4>
-                <div class="arvore-habilidades">
-                    <div class="item-habilidade">
-                        <small>REMATAR (Shooting)</small><div class="barra-habilidade stats-remate"></div>
-                    </div>
-                    <div class="item-habilidade">
-                        <small>VISÃO DE JOGO (Vision)</small><div class="barra-habilidade stats-visao"></div>
-                    </div>
-                    <div class="item-habilidade">
-                        <small>DRIBLAR (Dribbling)</small><div class="barra-habilidade stats-drible"></div>
-                    </div>
-                    <div class="item-habilidade">
-                        <small>DEFESA (Defence)</small><div class="barra-habilidade stats-defesa"></div>
-                    </div>
-                    <div class="item-habilidade">
-                        <small>EGO PESSOAL</small><div class="barra-habilidade stats-ego"></div>
+                <h4 class="radar-title">RADAR DE ATRIBUTOS</h4>
+                <div class="radar-container">
+                    <div class="radar">
+                        <!-- Fundo -->
+                        <svg viewBox="0 0 200 200" class="grid">
+                            <polygon points="100,15 155,55 155,145 100,185 45,145 45,55" fill="none" stroke="#444" stroke-width="1"/>
+                            <polygon points="100,35 141,73 141,127 100,165 59,127 59,73" fill="none" stroke="#444" stroke-width="1"/>
+                            <polygon points="100,55 127,90 127,110 100,145 73,110 73,90" fill="none" stroke="#444" stroke-width="1"/>
+                            <line x1="100" y1="15" x2="100" y2="185" stroke="#444" stroke-width="1"/>
+                            <line x1="45" y1="55" x2="155" y2="145" stroke="#444" stroke-width="1"/>
+                            <line x1="155" y1="55" x2="45" y2="145" stroke="#444" stroke-width="1"/>
+                        </svg>
+
+                        <!-- Dados Isagi (valores finais Neo Egoist) -->
+                        <svg viewBox="0 0 200 200" class="data">
+                            <polygon points="100,28 148,68 142,130 100,142 58,130 52,68"
+                                     fill="#0066cc44" stroke="#0066cc" stroke-width="3.5"/>
+                        </svg>
+
+                        <div class="label speed"   data-value="84">SPEED</div>
+                        <div class="label offense" data-value="97">OFFENSE</div>
+                        <div class="label shoot"   data-value="94">SHOOT</div>
+                        <div class="label dribble" data-value="80">DRIBBLE</div>
+                        <div class="label pass"    data-value="85">PASS</div>
+                        <div class="label defense" data-value="86">DEFENSE</div>
+
+                        <div class="overall">96</div>
                     </div>
                 </div>
             </div>
 
-            <div id="rin" class="cartao-jogador">
-                <div class="etiqueta-rank">#2</div>
+            <!-- RIN ITOSHI - #2 Mundial -->
+            <div class="player-card">
+                <div class="rank-tag">#2</div>
                 <h3>RIN ITOSHI</h3>
-                <p class="valor-atual">Valor de Mercado: €140.000.000</p>
+                <p class="current-value">Valor de Mercado: 240.000.000¥</p>
+                <img src="Rin.jpg" alt="Rin Itoshi" class="player-img">
+                <p class="weapon">Weapon: Trivela Perfeita + Flow State</p>
                 
-                <div class="contentor-imagem">
-                    <img src="../imagens/Rin.jpg" alt="Rin Itoshi" class="img-jogador">
-                </div>
-                
-                <p class="arma">Arma: FUTEBOL DE CONTROLO / CHUTE PERFEITO</p>
-                
-                <h4 class="titulo-arvore-habilidades">ÁRVORE DE HABILIDADES:</h4>
-                <div class="arvore-habilidades">
-                    <div class="item-habilidade">
-                        <small>REMATAR (Shooting)</small><div class="barra-habilidade rin-remate"></div>
-                    </div>
-                    <div class="item-habilidade">
-                        <small>VISÃO DE JOGO (Vision)</small><div class="barra-habilidade rin-visao"></div>
-                    </div>
-                    <div class="item-habilidade">
-                        <small>DRIBLAR (Dribbling)</small><div class="barra-habilidade rin-drible"></div>
-                    </div>
-                    <div class="item-habilidade">
-                        <small>DEFESA (Defence)</small><div class="barra-habilidade rin-defesa"></div>
-                    </div>
-                    <div class="item-habilidade">
-                        <small>EGO PESSOAL</small><div class="barra-habilidade rin-ego"></div>
+                <h4 class="radar-title">RADAR DE ATRIBUTOS</h4>
+                <div class="radar-container">
+                    <div class="radar">
+                        <svg viewBox="0 0 200 200" class="grid">
+                            <polygon points="100,15 155,55 155,145 100,185 45,145 45,55" fill="none" stroke="#444" stroke-width="1"/>
+                            <polygon points="100,35 141,73 141,127 100,165 59,127 59,73" fill="none" stroke="#444" stroke-width="1"/>
+                            <polygon points="100,55 127,90 127,110 100,145 73,110 73,90" fill="none" stroke="#444" stroke-width="1"/>
+                            <line x1="100" y1="15" x2="100" y2="185" stroke="#444" stroke-width="1"/>
+                            <line x1="45" y1="55" x2="155" y2="145" stroke="#444" stroke-width="1"/>
+                            <line x1="155" y1="55" x2="45" y2="145" stroke="#444" stroke-width="1"/>
+                        </svg>
+
+                        <svg viewBox="0 0 200 200" class="data">
+                            <polygon points="100,32 152,62 138,138 100,132 62,138 48,62"
+                                     fill="#00883344" stroke="#008833" stroke-width="3.5"/>
+                        </svg>
+
+                        <div class="label speed"   data-value="90">SPEED</div>
+                        <div class="label offense" data-value="96">OFFENSE</div>
+                        <div class="label shoot"   data-value="97">SHOOT</div>
+                        <div class="label dribble" data-value="90">DRIBBLE</div>
+                        <div class="label pass"    data-value="89">PASS</div>
+                        <div class="label defense" data-value="82">DEFENSE</div>
+
+                        <div class="overall">96</div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
     <footer>
         <div class="footer-info"><p>&copy; 2025 Projeto de TI - Rafael Dias e Manuel Santos</p></div>
-        <div class="footer-qr"><img src ="https://jaeger372.github.io/ProjetoTI/qr-code.png" width="70" alt="QR Code Projeto de TI"></div>
+        <div class="footer-qr"><img src="https://jaeger372.github.io/ProjetoTI/qr-code.png" width="70" alt="QR Code Projeto de TI"></div>
     </footer>
 </body>
 </html>

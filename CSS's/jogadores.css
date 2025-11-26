@@ -1,125 +1,150 @@
-.grelha-jogadores 
-{
+/* jogadores.css - Versão PROFISSIONAL e LIMPA */
+.players-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 40px;
-   
-    margin-top: 40px;
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.cartao-jogador 
-{
-    border-radius: 8px;
+.player-card {
+    background: #0f111a;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    border: 1px solid #222;
+    text-align: center;
+    transition: transform 0.3s ease;
     position: relative;
-    border: 10px solid rgb(11, 11, 71);
-    padding: 20px;
-    background-color: #2c2c2c;
-    transition: transform 0.3s ease-in-out;
 }
 
-.cartao-jogador:hover 
-{
-    transform: scale(1.05);
+.player-card:hover {
+    transform: translateY(-6px);
 }
 
-.etiqueta-rank 
-{
+.rank-tag {
     position: absolute;
-    top: 0;
-    right: 0;
-    background-color: var(--cor-secundaria);
-    color: var(--cor-fundo);
-    padding: 5px 15px;
-    font-family: var(--fonte-titulo, sans-serif);
-    font-weight: 700;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+    top: 0; right: 0;
+    background: #ffd700;
+    color: #000;
+    padding: 8px 20px;
+    font-weight: 900;
+    font-size: 1.3em;
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-.img-jogador 
-{
-    width: 55%;
-    max-width: 200px; 
-    height: auto;
-    display: block;
-    margin: 10px auto 20px auto;
-    border: 3px solid var(--cor-principal);
+.player-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
     border-radius: 50%;
-    padding: 1px 1px 1px;
-}
-
-.valor-atual 
-{
-    color: var(--cor-suporte);
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.arma 
-{
-    color: var(--cor-secundaria);
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.titulo-arvore-habilidades 
-{
-    color: var(--cor-secundaria);
-    margin-top: 25px;
-    font-size: 1.1em;
-    border-bottom: 1px dashed var(--cor-suporte);
-    padding-bottom: 5px;
-}
-
-.item-habilidade 
-{
-    margin-bottom: 10px;
-}
-
-.item-habilidade small 
-{
-    color: var(--cor-principal);
-    font-weight: bold;
+    border: 4px solid #333;
+    margin: 15px auto;
     display: block;
-    margin-bottom: 3px;
-    font-family: var(--fonte-titulo, sans-serif);
 }
 
-.barra-habilidade 
-{
-    background-color: var(--cor-fundo-card, #555);
-    height: 8px;
+.current-value {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #00ddff;
+    margin: 12px 0;
+}
+
+.weapon {
+    font-size: 1.1em;
+    color: #aaa;
+    font-style: italic;
+    margin: 10px 0 25px;
+}
+
+.radar-title {
+    margin: 30px 0 15px;
+    font-size: 1.3em;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/* Radar limpo e profissional */
+.radar-container {
+    width: 260px;
+    height: 260px;
+    margin: 0 auto;
     position: relative;
-    border-radius: 4px;
-    overflow: hidden;
 }
 
-.barra-habilidade::after 
-{
-    content: '';
-    position: absolute;
+.radar {
+    width: 100%;
     height: 100%;
-    background-color: var(--cor-principal); 
+    position: relative;
+}
+
+.radar svg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
+.label {
+    position: absolute;
+    font-size: 11px;
+    font-weight: bold;
+    color: #ccc;
+    text-transform: uppercase;
+    cursor: default;
+    transition: color 0.2s;
+}
+
+/* Tooltip perfeito */
+.label::before {
+    content: attr(data-value);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 8px;
+    background: #111;
+    color: #0f0;
+    padding: 5px 10px;
     border-radius: 4px;
-    left: 0;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    z-index: 10;
 }
 
-
-.stats-remate::after { width: 85%; background-color: var(--cor-secundaria); } 
-.stats-visao::after { width: 98%; background-color: var(--cor-principal); } 
-.stats-drible::after { width: 70%; }
-.stats-defesa::after { width: 50%; }
-.stats-ego::after { width: 95%; background-color: #2d012c; } 
-
-
-.rin-remate::after { width: 95%; background-color: var(--cor-principal); } 
-.rin-visao::after { width: 88%; background-color: var(--cor-secundaria); } 
-.rin-drible::after { width: 80%; }
-.rin-defesa::after { width: 65%; }
-.rin-ego::after { width: 90%; background-color: #c90036; }
-
-body
-{
-    background-color: #0c102e;
-    text-shadow: -1px -1px 0 #000, 0px  1px 0 #000, -1px  1px 0 #000,1px  1px 1px #180c4a;
+.label:hover::before {
+    opacity: 1;
 }
 
+.label:hover {
+    color: #fff;
+}
+
+/* Posições exatas (sem translate extra) */
+.speed   { top: 8%;   left: 50%;  transform: translateX(-50%); }
+.offense { top: 26%;  right: 12%; }
+.shoot   { bottom: 26%; right: 12%; }
+.dribble { bottom: 8%; left: 50%;  transform: translateX(-50%); }
+.pass    { bottom: 26%; left: 12%; }
+.defense { top: 26%;  left: 12%; }
+
+.overall {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 62px;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+    .radar-container { width: 220px; height: 220px; }
+    .overall { font-size: 50px; }
+}
