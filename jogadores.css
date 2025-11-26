@@ -1,0 +1,97 @@
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.player-card {
+    border-radius: 8px;
+    position: relative;
+}
+
+.rank-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-fundo);
+    padding: 5px 15px;
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+}
+
+.player-img {
+    width: 100%;
+    max-width: 250px; 
+    height: auto;
+    display: block;
+    margin: 10px auto 20px auto;
+    border: 3px solid var(--cor-principal);
+    border-radius: 50%;
+}
+
+.current-value {
+    color: var(--cor-suporte);
+    margin-bottom: 10px;
+}
+
+.weapon {
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.skill-tree-title {
+    color: var(--cor-secundaria);
+    margin-top: 25px;
+    font-size: 1.1em;
+    border-bottom: 1px dashed var(--cor-suporte);
+    padding-bottom: 5px;
+}
+
+.skill-item {
+    margin-bottom: 10px;
+}
+
+.skill-item small {
+    color: var(--cor-principal);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 3px;
+    font-family: var(--fonte-titulo);
+}
+
+.skill-bar {
+    background-color: var(--cor-fundo-card);
+    height: 8px;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-bar::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background-color: var(--cor-principal); 
+    border-radius: 4px;
+    transition: width 0.5s ease-out;
+    left: 0;
+}
+
+
+.stats-shooting::after { width: 85%; background-color: var(--cor-secundaria); } 
+.stats-vision::after { width: 98%; background-color: var(--cor-principal); } 
+.stats-dribbling::after { width: 70%; }
+.stats-defence::after { width: 50%; }
+.stats-ego::after { width: 95%; background-color: #2d012c; } 
+
+.rin-shooting::after { width: 95%; background-color: var(--cor-principal); } 
+.rin-vision::after { width: 88%; background-color: var(--cor-secundaria); } 
+.rin-dribbling::after { width: 80%; }
+.rin-defense::after { width: 65%; }
+.rin-ego::after { width: 90%; background-color: #c90036; }
