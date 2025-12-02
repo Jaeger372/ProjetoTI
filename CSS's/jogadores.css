@@ -107,7 +107,7 @@
     transition: color 0.2s;
 }
 
-/* Tooltip perfeito */
+
 .label::before 
 {
     content: attr(data-value);
@@ -157,11 +157,4 @@
     font-weight: 900;
     color: #ffffff;
     text-shadow: 0 0 10px rgba(255,255,255,0.3);
-}
-
-
-@media (max-width: 480px) 
-{
-    .radar-container { width: 220px; height: 220px; }
-    .overall { font-size: 50px; }
 }
