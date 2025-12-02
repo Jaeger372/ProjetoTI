@@ -4,9 +4,30 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 40px;
+    overflow: visible;
+}
+
+.regra-card 
+{
+    display: block;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+    transform-origin: center center;
+    will-change: transform;
+    backface-visibility: hidden;
+    overflow: visible;
 }
 
 
+.regra-card:hover 
+{
+    transform: scale(1.05) translateZ(0);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    z-index: 5;
+}
 
 .regra-card h3 
 {
@@ -14,7 +35,12 @@
     margin-bottom: 15px;
 }
 
-
+.regra-card p 
+{
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+}
 body 
 {
     background-color: var(--cor-fundo);
