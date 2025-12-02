@@ -24,19 +24,22 @@ img:hover
     border: 1px solid var(--cor-principal);
     display: flex;
     align-items: center;
-    gap: 15px;
     z-index: 10; 
     position: relative;
+    gap: 35px;
 }
 
 .icone-mestre 
 {
-    width: 90px;
-    height: 90px;
-    border-radius: 8px;
+    width: 10%;
+    height: 10%;
+    border-radius: 5px;
     object-fit: cover;
     align-self: flex-start;
+    border: var(--cor-secundaria) solid;
+
 }
+
 
 .texto-mestre h3 
 {
