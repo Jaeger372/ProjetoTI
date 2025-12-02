@@ -30,3 +30,8 @@ body
     background-size:cover;
     background-attachment: fixed;
 }
+
+h1
+{
+    color: #fe326c
+}
