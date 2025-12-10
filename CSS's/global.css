@@ -212,16 +212,20 @@ footer
     color: #fff;
 }
 
-/* --- PREPARAÇÃO PARA O MENU HAMBÚRGUER (ESCONDIDO NO DESKTOP) --- */
+/* --- PREPARAÇÃO HAMBÚRGUER: ESCONDIDO NO DESKTOP --- */
 .hidden-checkbox {
-    display: none; /* Oculta a caixa de seleção */
+    display: none;
 }
 
 .burger-label {
     display: none; /* ESCONDE O ÍCONE HAMBÚRGUER NO DESKTOP */
 }
 
+
+/* ---------------------------------------------------------------------- */
 /* --- MEDIA QUERY PARA MOBILE (MÁX. 768px) --- */
+/* ---------------------------------------------------------------------- */
+
 @media (max-width: 768px) 
 {
     
@@ -238,7 +242,7 @@ footer
         right: 0;
         width: 180px; 
         
-        /* O CÓDIGO DO SCROLL: Altura da janela menos a altura do header */
+        /* O CÓDIGO DO SCROLL */
         height: calc(100vh - 60px); 
         overflow-y: scroll; /* ATIVA O SCROLL */
 
@@ -251,9 +255,9 @@ footer
         transition: transform 0.4s ease-in-out;
     }
     
-    /* 2. MOSTRA O ÍCONE CLICÁVEL (O LABEL) NO MOBILE */
+    /* 2. MOSTRA O ÍCONE CLICÁVEL (O LABEL) NO MOBILE (CORREÇÃO FINAL) */
     .burger-label {
-        display: flex; /* Ícone visível no mobile */
+        display: flex !important; /* FORÇA a visibilidade no telemóvel */
         flex-direction: column;
         justify-content: space-around;
         width: 30px;
