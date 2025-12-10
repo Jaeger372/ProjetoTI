@@ -10,7 +10,7 @@
 .regra-card 
 {
     display: block;
-    background: #fff;
+    background: #040624e6;
     padding: 20px;
     border-radius: 10px;
     border: 1px solid rgba(0,0,0,0.1);
@@ -19,6 +19,7 @@
     will-change: transform;
     backface-visibility: hidden;
     overflow: visible;
+    border: #fe326c solid 2px;
 }
 
 
@@ -37,7 +38,7 @@
 
 .regra-card p 
 {
-    color: #333;
+    color: #ffffff;
     line-height: 1.5;
     margin: 0;
 }
