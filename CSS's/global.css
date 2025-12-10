@@ -5,15 +5,14 @@
     --cor-principal: #0d1b86;       
     --cor-secundaria: #fe326c;       
     --cor-fundo: #0c102e;
-    --cor-fundo-cartao: #1B1B33;   
+    --cor-fundo-cartao: #1B1B33;    
     --cor-texto: #FFFFFF; 
-    --cor-suporte: #AAAAAA;       
+    --cor-suporte: #AAAAAA;         
     --fonte-titulo: 'Oswald', sans-serif;
     --fonte-corpo: 'Roboto', sans-serif;
 }
 
-
-
+/* --- ESTILOS GERAIS DE BASE --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -96,13 +95,11 @@ nav a
     transition: color 0.3s, border-bottom 0.3s;
 }
 
-
 nav a:hover, nav a.ativo 
 {
     color: var(--cor-principal);
     border-bottom: 2px solid var(--cor-principal);
 }
-
 
 .titulo-secao 
 {
@@ -115,14 +112,12 @@ nav a:hover, nav a.ativo
     letter-spacing: 1px;
 }
 
-
 .subtitulo 
 {
     font-size: 1.1em;
     color: var(--cor-suporte);
     margin-bottom: 50px;
 }
-
 
 .cartao 
 {
@@ -152,7 +147,6 @@ footer
     width: 100%;
 }
 
-
 .rodape-qr img 
 {
     width: 70px;
@@ -161,14 +155,12 @@ footer
     padding: 5px;
 }
 
-
 .detalhe-logo-equipa 
 {
     max-width: 250px; 
     border: 5px solid var(--cor-secundaria); 
     border-radius: 10px;
 }
-
 
 .tag-mestre 
 { 
@@ -177,7 +169,6 @@ footer
     margin-bottom: 20px; 
     display: block; 
 }
-
 
 .lista-jogadores h2 
 { 
@@ -204,97 +195,131 @@ footer
 
 .container
 { 
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 20px;                       
-  border-radius: 8px;                 
-  width: fit-content;                  
-  max-width: 90%;                       
-  margin: 20px auto;                  
-  color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;            
+    border-radius: 8px;              
+    width: fit-content;              
+    max-width: 90%;                    
+    margin: 20px auto;               
+    color: #fff;
 }
 
+/* --- PREPARAÇÃO PARA O MENU HAMBÚRGUER --- */
+.hidden-checkbox {
+    display: none; /* Oculta a caixa de seleção (o 'cérebro' do menu) */
+}
+
+.burger-label {
+    display: none; /* Escondido por defeito no desktop */
+}
+
+/* --- MEDIA QUERY PARA MOBILE (MAX 768px) --- */
 @media (max-width: 768px) 
 {
+    
+    /* 1. Oculta os links de navegação normais no mobile */
+    nav {
+        /* Torna o elemento visível, mas fora do ecrã */
+        display: block; 
+        position: fixed;
+        top: 60px; /* Altura do header fixo */
+        right: 0;
+        width: 180px; 
+        
+        /* O CÓDIGO DO SCROLL: Altura da janela menos a altura do header */
+        height: calc(100vh - 60px); 
+        overflow-y: scroll; /* ATIVA O SCROLL */
 
-  nav 
-  {
-        /* Ocupa 0 espaço no header, mas é o nosso alvo de hover */
-        height: 0;
-        overflow: hidden; 
-        width: 0;
-        
-        /* Posiciona o menu aberto fixamente no ecrã */
-        position: fixed; 
-        top: 60px; /* Começa logo abaixo do ícone (20px de top + 30px de altura + 10px de margem) */
-        right: 0; 
-        
-        background-color: var(--cor-fundo-menu);
-        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        background-color: var(--cor-fundo); 
+        box-shadow: -5px 0 10px rgba(0,0,0,0.5); 
         z-index: 999;
-        transition: height 0.3s ease;
-    }
-
-    nav::before 
-    {
-        content: '☰'; 
-        font-size: 20px;
-        color: var(--cor-principal);
         
-        position: fixed; 
-        top: 20px; 
-        right: 20px;
-        
-        width: 30px; 
-        height: 30px;
-        line-height: 30px; 
-        text-align: center;
-        background: #000000;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        cursor: pointer;
-        z-index: 1000;
-    }
-
-    /* 3. Abertura do Menu com :hover */
-    nav:hover 
-    {
-        height: 320px; /* Altura suficiente para mostrar todos os seus links */
-        width: 180px;  /* Largura do menu aberto */
-    }
-
-    nav a 
-    {
-        display: block;
-        margin: 0;
-        padding: 12px 10px;
-        text-align: right; /* Alinha o texto para a direita do menu */
-        border-bottom: 1px solid #eee;
-        margin-left: 0;
-        background-color: #0c102e;
-        text-transform: capitalize; /* Mais suave no mobile */
+        /* MOVE O MENU PARA FORA DO ECRÃ (ESCONDIDO para a direita) */
+        transform: translateX(100%); 
+        transition: transform 0.4s ease-in-out;
     }
     
-    nav a:last-child 
-    {
+    /* 2. MOSTRA O ÍCONE CLICÁVEL (O LABEL) */
+    .burger-label {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        z-index: 1001;
+        cursor: pointer;
+    }
+    
+    .burger-label span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--cor-principal); 
+        transition: all 0.3s ease-in-out;
+        transform-origin: center;
+    }
+
+    /* 3. LÓGICA DO CHECKBOX: QUANDO MARCADO, MOSTRA O MENU */
+    /* Se o checkbox estiver :checked, afeta o seu irmão (~) .main-nav */
+    #burger-toggle:checked ~ nav {
+        transform: translateX(0); /* Desliza para dentro do ecrã (VISÍVEL) */
+    }
+
+    /* 4. ANIMAÇÃO DO ÍCONE 'X' (QUANDO O CHECKBOX ESTÁ MARCADO) */
+    #burger-toggle:checked ~ .burger-label span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    #burger-toggle:checked ~ .burger-label span:nth-child(2) {
+        opacity: 0;
+    }
+    #burger-toggle:checked ~ .burger-label span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* 5. Estilo dos Links no Menu Aberto (Mobile) */
+    nav ul {
+        list-style: none;
+        padding: 20px 0;
+        margin: 0;
+        text-align: right; 
+    }
+    
+    nav a {
+        display: block;
+        padding: 12px 10px;
+        margin: 0;
+        border-bottom: 1px solid var(--cor-fundo-cartao); 
+        color: var(--cor-texto);
+        background-color: transparent;
+        text-transform: uppercase;
+        margin-left: 0;
+    }
+    
+    nav a:last-child {
         border-bottom: none;
+    }
+
+    nav a:hover, nav a.ativo {
+        color: var(--cor-principal);
+        border-bottom: none; 
+        background-color: rgba(255, 255, 255, 0.1); 
+    }
+
+    /* AJUSTES FINAIS PARA ELEMENTOS QUE JÁ TINHAS */
+    .logotipo {
+        font-size: 1.5em; 
+    }
+
+    header {
+        justify-content: space-between;
     }
 }
 
 
-    .logotipo 
-    {
-    color: var(--cor-secundaria);
-    font-weight: bold;
-    letter-spacing: 2px;
-    font-family: var(--fonte-titulo);
-    font-size: 1em;
-    }
-    
+/* --- OUTRAS MEDIA QUERIES (mantidas) --- */
 
-    @media (min-width: 1400px) 
-    {
-
-    
+@media (min-width: 1400px) 
+{
     nav a 
     {
         font-size: 1em;
@@ -305,8 +330,4 @@ footer
     {
         font-size: 1.5em;
     }
-
-    
 }
-
-
