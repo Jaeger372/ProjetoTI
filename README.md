@@ -7,4 +7,4 @@ Rafael Dias e Manuel Santos
 ## Link para o site
 ([Blue Lock Main Page](https://jaeger372.github.io/ProjetoTI/Páginas%20HTML/))
 
-<img src ="https://jaeger372.github.io/ProjetoTI/qr-code.png" width="150">
+<img src ="https://jaeger372.github.io/ProjetoTI/url_qrcodecreator.com_15_54_51" width="150">
