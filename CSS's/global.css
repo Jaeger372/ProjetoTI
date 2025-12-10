@@ -84,6 +84,14 @@ header
     font-family: var(--fonte-titulo);
 }
 
+/* --- NAVEGAÇÃO COMPLETA (VISÍVEL NO DESKTOP POR DEFEITO) --- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Links lado a lado no PC */
+}
+
 nav a 
 {
     color: var(--cor-texto);
@@ -204,22 +212,26 @@ footer
     color: #fff;
 }
 
-/* --- PREPARAÇÃO PARA O MENU HAMBÚRGUER --- */
+/* --- PREPARAÇÃO PARA O MENU HAMBÚRGUER (ESCONDIDO NO DESKTOP) --- */
 .hidden-checkbox {
-    display: none; /* Oculta a caixa de seleção (o 'cérebro' do menu) */
+    display: none; /* Oculta a caixa de seleção */
 }
 
 .burger-label {
-    display: none; /* Escondido por defeito no desktop */
+    display: none; /* ESCONDE O ÍCONE HAMBÚRGUER NO DESKTOP */
 }
 
-/* --- MEDIA QUERY PARA MOBILE (MAX 768px) --- */
+/* --- MEDIA QUERY PARA MOBILE (MÁX. 768px) --- */
 @media (max-width: 768px) 
 {
     
-    /* 1. Oculta os links de navegação normais no mobile */
+    /* ESCONDE A NAVEGAÇÃO COMPLETA DO PC NO MOBILE */
+    nav ul {
+        display: none; 
+    }
+    
+    /* 1. POSICIONAMENTO E ESTILIZAÇÃO DO MENU (NAV) */
     nav {
-        /* Torna o elemento visível, mas fora do ecrã */
         display: block; 
         position: fixed;
         top: 60px; /* Altura do header fixo */
@@ -239,9 +251,9 @@ footer
         transition: transform 0.4s ease-in-out;
     }
     
-    /* 2. MOSTRA O ÍCONE CLICÁVEL (O LABEL) */
+    /* 2. MOSTRA O ÍCONE CLICÁVEL (O LABEL) NO MOBILE */
     .burger-label {
-        display: flex;
+        display: flex; /* Ícone visível no mobile */
         flex-direction: column;
         justify-content: space-around;
         width: 30px;
@@ -260,12 +272,16 @@ footer
     }
 
     /* 3. LÓGICA DO CHECKBOX: QUANDO MARCADO, MOSTRA O MENU */
-    /* Se o checkbox estiver :checked, afeta o seu irmão (~) .main-nav */
     #burger-toggle:checked ~ nav {
         transform: translateX(0); /* Desliza para dentro do ecrã (VISÍVEL) */
     }
 
-    /* 4. ANIMAÇÃO DO ÍCONE 'X' (QUANDO O CHECKBOX ESTÁ MARCADO) */
+    /* 4. MOSTRA OS LINKS DENTRO DO MENU QUANDO ATIVO */
+    #burger-toggle:checked ~ nav ul {
+        display: block; /* A lista de links torna-se visível */
+    }
+
+    /* 5. ANIMAÇÃO DO ÍCONE 'X' (QUANDO O CHECKBOX ESTÁ MARCADO) */
     #burger-toggle:checked ~ .burger-label span:nth-child(1) {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
@@ -276,7 +292,7 @@ footer
         transform: rotate(45deg) translate(-5px, -6px);
     }
 
-    /* 5. Estilo dos Links no Menu Aberto (Mobile) */
+    /* 6. Estilo dos Links no Menu Aberto (Mobile) */
     nav ul {
         list-style: none;
         padding: 20px 0;
@@ -305,11 +321,10 @@ footer
         background-color: rgba(255, 255, 255, 0.1); 
     }
 
-    /* AJUSTES FINAIS PARA ELEMENTOS QUE JÁ TINHAS */
+    /* AJUSTES FINAIS */
     .logotipo {
         font-size: 1.5em; 
     }
-
     header {
         justify-content: space-between;
     }
@@ -320,8 +335,7 @@ footer
 
 @media (min-width: 1400px) 
 {
-    nav a 
-    {
+    nav a {
         font-size: 1em;
         margin-left: 40px;
     }
