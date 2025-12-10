@@ -215,59 +215,74 @@ footer
 
 @media (max-width: 768px) 
 {
-   
-    .menu-toggle 
-    {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--cor-texto);
-        font-size: 2em;
-        cursor: pointer;
-    }
 
-    header 
-    {
-        padding: 15px 3%; 
-    }
-
-    nav 
-    {
+  nav 
+  {
+        /* Ocupa 0 espaço no header, mas é o nosso alvo de hover */
+        height: 0;
+        overflow: hidden; 
+        width: 0;
         
-        display: none; 
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: var(--cor-fundo-cartao); 
-        border-top: 1px solid var(--cor-principal);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-        flex-direction: column; 
-        padding-bottom: 20px;
+        /* Posiciona o menu aberto fixamente no ecrã */
+        position: fixed; 
+        top: 60px; /* Começa logo abaixo do ícone (20px de top + 30px de altura + 10px de margem) */
+        right: 0; 
+        
+        background-color: var(--cor-fundo-menu);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        z-index: 999;
+        transition: height 0.3s ease;
     }
 
+    /* 2. Cria o ÍCONE HAMBÚRGUER (Fixo no Canto) */
+    nav::before 
+    {
+        content: '☰'; 
+        font-size: 20px;
+        color: var(--cor-principal);
+        
+        /* Fixo no ecrã para não desaparecer com o zoom/scroll */
+        position: fixed; 
+        top: 20px; 
+        right: 20px;
+        
+        width: 30px; 
+        height: 30px;
+        line-height: 30px; 
+        text-align: center;
+        background: #000000;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        cursor: pointer;
+        z-index: 1000;
+    }
 
+    /* 3. Abertura do Menu com :hover */
+    nav:hover 
+    {
+        height: 320px; /* Altura suficiente para mostrar todos os seus links */
+        width: 180px;  /* Largura do menu aberto */
+    }
+
+    /* 4. Estilo dos Links dentro do Menu Aberto */
     nav a 
     {
-        display: block; 
+        display: block;
         margin: 0;
-        padding: 15px 5%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 12px 10px;
+        text-align: right; /* Alinha o texto para a direita do menu */
+        border-bottom: 1px solid #eee;
+        margin-left: 0;
+        background-color: #0c102e;
+        text-transform: capitalize; /* Mais suave no mobile */
     }
     
-    
-
-    .nav-aberta nav 
+    nav a:last-child 
     {
-        display: flex;
-        flex-direction: column;
+        border-bottom: none;
     }
+}
 
-     nav a:hover 
-    {
-        background-color: rgba(255, 255, 255, 0.05);
-        border-bottom: 1px solid var(--cor-principal);
-    }
 
     .logotipo 
     {
@@ -277,7 +292,7 @@ footer
     font-family: var(--fonte-titulo);
     font-size: 1em;
     }
-    }
+    
 
     @media (min-width: 1400px) 
     {
@@ -296,4 +311,5 @@ footer
 
     
 }
+
 
