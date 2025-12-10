@@ -234,14 +234,12 @@ footer
         transition: height 0.3s ease;
     }
 
-    /* 2. Cria o ÍCONE HAMBÚRGUER (Fixo no Canto) */
     nav::before 
     {
         content: '☰'; 
         font-size: 20px;
         color: var(--cor-principal);
         
-        /* Fixo no ecrã para não desaparecer com o zoom/scroll */
         position: fixed; 
         top: 20px; 
         right: 20px;
@@ -264,7 +262,6 @@ footer
         width: 180px;  /* Largura do menu aberto */
     }
 
-    /* 4. Estilo dos Links dentro do Menu Aberto */
     nav a 
     {
         display: block;
