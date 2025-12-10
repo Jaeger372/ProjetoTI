@@ -219,6 +219,7 @@ footer
     margin: 20px auto;               
     color: #fff;
 }
+<<<<<<< HEAD
 /* 1. Posicionamento na Tela */
 .flutuante-menu 
 {
@@ -226,6 +227,12 @@ footer
     top: 20px;      
     right: 20px;     
     z-index: 1000;   
+=======
+
+/* --- PREPARAÇÃO HAMBÚRGUER: ESCONDIDO NO DESKTOP --- */
+.hidden-checkbox {
+    display: none;
+>>>>>>> e04ab5b7b0a4aa90e9956b8179777de09c5800b7
 }
 
 
@@ -242,6 +249,7 @@ footer
 }
 
 
+<<<<<<< HEAD
 .burguersimbol
 {background-image: url(../imagens/burguer.png);}
 
@@ -283,6 +291,117 @@ footer
 {
 nav {
         display: none !important;
+=======
+/* ---------------------------------------------------------------------- */
+/* --- MEDIA QUERY PARA MOBILE (MÁX. 768px) --- */
+/* ---------------------------------------------------------------------- */
+
+@media (max-width: 768px) 
+{
+    
+    /* ESCONDE A NAVEGAÇÃO COMPLETA DO PC NO MOBILE */
+    nav ul {
+        display: none; 
+    }
+    
+    /* 1. POSICIONAMENTO E ESTILIZAÇÃO DO MENU (NAV) */
+    nav {
+        display: block; 
+        position: fixed;
+        top: 60px; /* Altura do header fixo */
+        right: 0;
+        width: 180px; 
+        
+        /* O CÓDIGO DO SCROLL */
+        height: calc(100vh - 60px); 
+        overflow-y: scroll; /* ATIVA O SCROLL */
+
+        background-color: var(--cor-fundo); 
+        box-shadow: -5px 0 10px rgba(0,0,0,0.5); 
+        z-index: 999;
+        
+        /* MOVE O MENU PARA FORA DO ECRÃ (ESCONDIDO para a direita) */
+        transform: translateX(100%); 
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    /* 2. MOSTRA O ÍCONE CLICÁVEL (O LABEL) NO MOBILE (CORREÇÃO FINAL) */
+    .burger-label {
+        display: flex !important; /* FORÇA a visibilidade no telemóvel */
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        z-index: 1001;
+        cursor: pointer;
+    }
+    
+    .burger-label span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--cor-principal); 
+        transition: all 0.3s ease-in-out;
+        transform-origin: center;
+    }
+
+    /* 3. LÓGICA DO CHECKBOX: QUANDO MARCADO, MOSTRA O MENU */
+    #burger-toggle:checked ~ nav {
+        transform: translateX(0); /* Desliza para dentro do ecrã (VISÍVEL) */
+    }
+
+    /* 4. MOSTRA OS LINKS DENTRO DO MENU QUANDO ATIVO */
+    #burger-toggle:checked ~ nav ul {
+        display: block; /* A lista de links torna-se visível */
+    }
+
+    /* 5. ANIMAÇÃO DO ÍCONE 'X' (QUANDO O CHECKBOX ESTÁ MARCADO) */
+    #burger-toggle:checked ~ .burger-label span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    #burger-toggle:checked ~ .burger-label span:nth-child(2) {
+        opacity: 0;
+    }
+    #burger-toggle:checked ~ .burger-label span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* 6. Estilo dos Links no Menu Aberto (Mobile) */
+    nav ul {
+        list-style: none;
+        padding: 20px 0;
+        margin: 0;
+        text-align: right; 
+    }
+    
+    nav a {
+        display: block;
+        padding: 12px 10px;
+        margin: 0;
+        border-bottom: 1px solid var(--cor-fundo-cartao); 
+        color: var(--cor-texto);
+        background-color: transparent;
+        text-transform: uppercase;
+        margin-left: 0;
+    }
+    
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    nav a:hover, nav a.ativo {
+        color: var(--cor-principal);
+        border-bottom: none; 
+        background-color: rgba(255, 255, 255, 0.1); 
+    }
+
+    /* AJUSTES FINAIS */
+    .logotipo {
+        font-size: 1.5em; 
+    }
+    header {
+        justify-content: space-between;
+>>>>>>> e04ab5b7b0a4aa90e9956b8179777de09c5800b7
     }
 }
 
